@@ -1,0 +1,18 @@
+﻿@using Magazin.Web.Models
+@using Magazin.Web.HtmlHelpers;
+@model GoodsListViewModel
+
+@{
+    ViewBag.Title = "Товары";
+}
+@foreach (var p in @Model.Goods)
+{
+    @Html.Partial("GoodsSummary", p)
+}
+
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
+        new { page = x, category = Model.CurrentCategory }))
+</div>
+
+
