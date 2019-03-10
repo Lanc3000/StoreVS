@@ -3,8 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@ViewBag.Title</title>
 </head>
 <body style="background-color: #f6f6f6">
@@ -52,13 +57,91 @@
 
         </div>
     </nav>
-    <div class="row panel">
-        <div id="categories" class="col-xs-3">
-            @Html.Action("Menu", "Nav")
+    <header class="header d-flex justify-content-around align-items-center mb-3">
+        <div>
+            <img src="img/LIMLOOK.png"></img>
         </div>
-        <div class="col-xs-8">
-            @RenderBody()
+
+        <p class="txtForNavBarWhite">Платья и юбки</p>
+        <p class="txtForNavBarWhite">Комбинезоны</p>
+        <p class="txtForNavBarWhite">Свитшоты</p>
+        <p class="txtForNavBarWhite">Футболки</p>
+        <p class="txtForNavBarWhite">Халаты</p>
+        <p class="txtForNavBarWhite">Штаны</p>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+
+        </form>
+        @Html.Action("Summary", "Cart")
+    </header>
+    <header class="col-md-6 col-xl-12 order-md-0 order-xl-1 mb-3">
+        <div class="row">
+            <div class="col-md-6 col-xl-6 d-flex justify-content-start">
+                <p class="txtCatalog mr-2">Свитшоты</p>
+                <p>33 товара</p>
+            </div>
+            <div class="col-md-6 col-xl-6 d-flex justify-content-end">
+
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        По рейтингу
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Популярные</a>
+                        <a class="dropdown-item" href="#">Так себе</a>
+                        <a class="dropdown-item" href="#">Самовывоз</a>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-light">
+                    <img src="img/17.png">
+                </button>
+                <button type="button" class="btn btn-light">
+                    <img src="img/18.png">
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container d-flex">
+        <div class="row  justify-content-between">
+            <div id="categories" class="col-lg-3 col-md-4">
+                @Html.Action("Menu", "Nav")
+            </div>
+            <div class="col-lg-9 col-md-8">
+                <div class="container">
+                    <div class="row">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <footer class="footer d-flex  align-items-center">
+        <div class="container">
+
+            <div class="row ">
+                <div class="row d-flex justify-content-around">
+                    <div>
+                        <img src="img/LIMLOOK.png"></img>
+                    </div>
+                    <p class="txtForNavBarWhite">Платья и юбки</p>
+                    <p class="txtForNavBarWhite">Комбинезоны</p>
+                    <p class="txtForNavBarWhite">Свитшоты</p>
+                    <p class="txtForNavBarWhite">Футболки</p>
+                    <p class="txtForNavBarWhite">Халаты</p>
+                    <p class="txtForNavBarWhite">Штаны</p>
+                    <div class="mr-2">
+                        <img src="img/group-22.png"></img>
+                    </div>
+                    <div class="mr-2">
+                        <img src="img/group-24.png"></img>
+                    </div>
+                    <div class="mr-2">
+                        <img src="img/group-23.png"></img>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 </body>
 </html>

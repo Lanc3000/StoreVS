@@ -1,19 +1,28 @@
 ﻿@model Magazin.Domain.Entities.Goods
 
-<div class="well">
-    <h3>
-        <strong>@Model/Name</strong>
-        <span class="pull-right label label-primary">@Model.Price.ToString("# руб")</span>
-    </h3>
-    @using (Html.BeginForm("AddToCart", "Cart"))
-    {
-        <div class="pull-right">
-            @Html.HiddenFor(x => x.GoodsId)
-            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-            <input type="submit" class="btn btn-success" value="Добавить в корзину" />
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card border-light">
+            <div class="card-img">
+                <img align="middle" src="img/rock.png" class="img-fluid" alt="КАРТИНКА">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title txtCard">@Model/Name</h5>
+                <a href="#" class="btn btn-block btn-light btnGrey ">@Model.Price.ToString("# ₽")</a>
+                
+                    @using (Html.BeginForm("AddToCart", "Cart"))
+                    {
+                <div class="pull-right">
+                    @Html.HiddenFor(x => x.GoodsId)
+                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                    <input type="submit" class="btn btn-block btn-primary btnBckg" value="В корзину" />
+                </div>
+                    }
+                
+                <span class="lead">@Model.Description</span>
+            </div>
         </div>
-    }
-    <span class="lead">@Model.Description</span>
-</div>
+    </div>
+
 
 
