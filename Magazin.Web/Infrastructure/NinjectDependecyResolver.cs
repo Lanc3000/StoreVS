@@ -7,6 +7,8 @@ using Ninject;
 using Magazin.Domain.Abstract;
 using Magazin.Domain.Entities;
 using Magazin.Domain.Concrete;
+using Magazin.Web.Infrastructure.Abstract;
+using Magazin.Web.Infrastructure.Concrete;
 
 namespace Magazin.Web.Infrastructure
 {
@@ -33,6 +35,7 @@ namespace Magazin.Web.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IMagazinRepository>().To<EFDbMagazinRepository>();
+            kernel.Bind<IAuthProvider>().To<FormAuthProvider>();
         }
     }
 }

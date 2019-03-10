@@ -58,21 +58,8 @@
         </div>
     </nav>
     <header class="header d-flex justify-content-around align-items-center mb-3">
-        <div>
-            <img src="img/LIMLOOK.png"></img>
-        </div>
-
-        <p class="txtForNavBarWhite">Платья и юбки</p>
-        <p class="txtForNavBarWhite">Комбинезоны</p>
-        <p class="txtForNavBarWhite">Свитшоты</p>
-        <p class="txtForNavBarWhite">Футболки</p>
-        <p class="txtForNavBarWhite">Халаты</p>
-        <p class="txtForNavBarWhite">Штаны</p>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-
-        </form>
-        @Html.Action("Summary", "Cart")
+         @Html.Action("Menu", "Nav"),
+         @Html.Action("Summary", "Cart")
     </header>
     <header class="col-md-6 col-xl-12 order-md-0 order-xl-1 mb-3">
         <div class="row">

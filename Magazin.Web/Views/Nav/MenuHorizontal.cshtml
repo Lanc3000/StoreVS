@@ -1,0 +1,35 @@
+﻿@model IEnumerable<string>
+
+
+
+    @Html.ActionLink( "List", "Goods", null, new { @class = "btn btn-default btn-sm" })
+
+    @foreach (var link in Model)
+    {
+        @Html.RouteLink(link, new
+        {
+            controller = "Goods",
+            action = "List",
+            category = link,
+            page = 1
+        }, new
+        {
+            @class = "btn btn-default btn-sm"
+                    + (link == ViewBag.SelectedCategory ? " btn-primary" : "")
+        })
+    }
+
+    <div>
+        <img src="img/LIMLOOK.png">
+    </div>
+
+    <p class="txtForNavBarWhite">Платья и юбки</p>
+    <p class="txtForNavBarWhite">Комбинезоны</p>
+    <p class="txtForNavBarWhite">Свитшоты</p>
+    <p class="txtForNavBarWhite">Футболки</p>
+    <p class="txtForNavBarWhite">Халаты</p>
+    <p class="txtForNavBarWhite">Штаны</p>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+    </form>
+

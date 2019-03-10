@@ -39,5 +39,15 @@ namespace Magazin.Web.Controllers
             };
             return View(model);
         }
+        public FileContentResult GetImage(int goodsId) {
+            Goods goods = repository.Goods.FirstOrDefault(g => g.GoodsId == goodsId);
+            if (goods != null)
+            {
+                return File(goods.ImageData, goods.ImageMimeTipe);
+            }
+            else {
+                return null;
+            }
+        }
     }
 }

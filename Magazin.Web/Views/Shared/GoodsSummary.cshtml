@@ -4,7 +4,8 @@
     <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card border-light">
             <div class="card-img">
-                <img align="middle" src="img/rock.png" class="img-fluid" alt="КАРТИНКА">
+                <img align="middle" src="@Url.Action("GetImage", "Goods",
+                new { Model.GoodsId })" class="img-fluid" alt="КАРТИНКА" />
             </div>
             <div class="card-body">
                 <h5 class="card-title txtCard">@Model/Name</h5>

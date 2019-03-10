@@ -10,5 +10,7 @@ namespace Magazin.Domain.Abstract
     public interface IMagazinRepository
     {
         IEnumerable<Goods> Goods { get; }
+        void SaveGoods(Goods goods);
+        Goods DeleteGoods(int goodsId);
     }
 }
