@@ -1,0 +1,4 @@
+﻿ALTER TABLE GOODS
+		ADD
+				ImageData			VARBINARY(MAX)  NULL,
+				ImageMimeTipe		VARCHAR(50)		NULL

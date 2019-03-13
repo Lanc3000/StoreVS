@@ -24,5 +24,15 @@ namespace Magazin.Web.Controllers
                 .OrderBy(x => x);
             return PartialView(categories);
         }
+        public PartialViewResult MenuHorizontal(string category = null)
+        {
+            ViewBag.SelectedCategory = category;
+
+            IEnumerable<string> categories = repository.Goods
+                .Select(goods => goods.Category)
+                .Distinct()
+                .OrderBy(x => x);
+            return PartialView(categories);
+        }
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="D:/WEB/MagazinVS/Magazin/style.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -51,15 +51,17 @@
                     <p class="txtForNavBarWhite">Доставка</p>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn btn-success">Вход</button>
+                    <button type="button" class="btn btn-success"> @Html.ActionLink("Вход", "Login", "Account")</button>
                 </li>
             </ul>
 
         </div>
     </nav>
     <header class="header d-flex justify-content-around align-items-center mb-3">
-         @Html.Action("Menu", "Nav"),
-         @Html.Action("Summary", "Cart")
+        
+            @Html.Action("MenuHorizontal", "Nav"),
+            @Html.Action("Summary", "Cart")
+        
     </header>
     <header class="col-md-6 col-xl-12 order-md-0 order-xl-1 mb-3">
         <div class="row">
@@ -108,7 +110,7 @@
             <div class="row ">
                 <div class="row d-flex justify-content-around">
                     <div>
-                        <img src="img/LIMLOOK.png"></img>
+                        <img src="img/LIMLOOK.png">
                     </div>
                     <p class="txtForNavBarWhite">Платья и юбки</p>
                     <p class="txtForNavBarWhite">Комбинезоны</p>
@@ -117,13 +119,13 @@
                     <p class="txtForNavBarWhite">Халаты</p>
                     <p class="txtForNavBarWhite">Штаны</p>
                     <div class="mr-2">
-                        <img src="img/group-22.png"></img>
+                        <img src="img/group-22.png">
                     </div>
                     <div class="mr-2">
-                        <img src="img/group-24.png"></img>
+                        <img src="img/group-24.png">
                     </div>
                     <div class="mr-2">
-                        <img src="img/group-23.png"></img>
+                        <img src="img/group-23.png">
                     </div>
                 </div>
             </div>
