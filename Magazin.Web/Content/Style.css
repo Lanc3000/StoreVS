@@ -1,0 +1,137 @@
+﻿body {
+}
+.bcgNav {
+    height: auto;
+    background-color: #4b4e5f;
+}
+
+.btnNavBar {
+    width: 82px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.txtForNavBar {
+    font-family: MuseoSansCyrl;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.txtForNavBarWhite {
+    color: #ffffff;
+}
+
+.txtCatalog {
+    font-family: MuseoSansCyrl;
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #666666;
+}
+.txtCardCatalog {
+    font-family: MuseoSansCyrl;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: #3b3b3b;
+}
+
+.btnCatalog {
+    width: 203px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-image: url(../img/hacki.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 82px;
+    opacity: 1;
+    
+}
+
+.shoes {
+    margin: 1em 0;
+    position: relative;
+}
+
+.Shape {
+    width: 82px;
+    height: 28px;
+    border-radius: 100px;
+    background-color: #39db2f;
+}
+
+.btnStyle {
+    width: 143px;
+    height: auto;
+    border-radius: 2px;
+}
+
+.bodyImg {
+    height: auto;
+    width: 100%;
+    margin: 1em;
+}
+
+.card {
+    background-color: #f6f6f6;
+}
+
+.txtCard {
+    font-family: MuseoSansCyrl;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.53;
+    letter-spacing: normal;
+    text-align: center;
+    color: #3b3b3b;
+}
+
+.btnBckg {
+    border-radius: 2px;
+    background-color: #5973ff;
+}
+
+.btnGrey {
+    border-radius: 2px;
+    background-color: rgba(89, 115, 255, 0.15);
+}
+
+.txtStyle1 {
+    font-family: HelveticaNeueDeskInterface;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5973ff;
+}
+
+.footer {
+    height: 82px;
+    background-color: #4b4e5f;
+}
+
+@font-face {
+    font-family: "MuseoSansCyrl";
+    src: url("../Content/fonts/MuseoSansCyrl-300Italic.ttf") format("truetype");
+}
