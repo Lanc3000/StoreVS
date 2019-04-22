@@ -23,7 +23,7 @@ namespace Magazin.Web.Controllers
             return View(repository.Goods);
         }
 
-        public ViewResult Edit(int goodsId)
+        public ViewResult Edit(int goodsId) //ищет товар с идентификатором соответствующим goodsId и передает его как объект представления методу View
         {
             Goods goods = repository.Goods
                 .FirstOrDefault(g => g.GoodsId == goodsId);

@@ -1,0 +1,3 @@
+﻿ALTER TABLE Goods
+		ADD
+				Producer		NVARCHAR(50)		NOT NULL

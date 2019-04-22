@@ -17,22 +17,22 @@ namespace Magazin.Web
                 "",
                 new
                 {
-                    controller="Goods",
-                    action="List",
-                    category=(string)null,
-                    page =1
+                    controller = "Goods",
+                    action = "List",
+                    category = (string)null,
+                    page = 1
                 });
 
             routes.MapRoute(
                     name: null,
                     url: "Page{page}",
-                    defaults: new { controller = "Goods", action = "List" , category = (string)null},
-                    constraints: new {page = @"\d+"}
+                    defaults: new { controller = "Goods", action = "List", category = (string)null },
+                    constraints: new { page = @"\d+" }
                 );
 
             routes.MapRoute(null,
                 "{category}",
-                new { controller = "Goods", action = "List" , page = 1}
+                new { controller = "Goods", action = "List", page = 1 }
                 );
 
             routes.MapRoute(null,

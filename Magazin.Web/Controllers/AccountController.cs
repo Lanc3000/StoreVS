@@ -5,6 +5,7 @@ using System.Web;
 using Magazin.Web.Infrastructure.Abstract;
 using Magazin.Web.Models;
 using System.Web.Mvc;
+using Ninject;
 
 namespace Magazin.Web.Controllers
 {

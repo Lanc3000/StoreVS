@@ -11,11 +11,13 @@ namespace Magazin.Web.Controllers
     {
         private IMagazinRepository repository;
 
-        public NavController(IMagazinRepository repository) {
+        public NavController(IMagazinRepository repository)
+        {
             this.repository = repository;
         }
 
-        public PartialViewResult Menu(string category = null) {
+        public PartialViewResult Menu(string category = null)
+        {
             ViewBag.SelectedCategory = category;
 
             IEnumerable<string> categories = repository.Goods

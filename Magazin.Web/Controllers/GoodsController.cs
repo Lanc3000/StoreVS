@@ -14,11 +14,13 @@ namespace Magazin.Web.Controllers
         private IMagazinRepository repository;
         public int pageSize = 4;
         // GET: Goods
-        public GoodsController(IMagazinRepository repository) {
+        public GoodsController(IMagazinRepository repository)
+        {
             this.repository = repository;
         }
 
-        public ViewResult List(string category, int page = 1) {
+        public ViewResult List(string category, int page = 1)
+        {
             GoodsListViewModel model = new GoodsListViewModel
             {
                 Goods = repository.Goods
@@ -35,17 +37,21 @@ namespace Magazin.Web.Controllers
                     repository.Goods.Where(goods => goods.Category == category).Count()
                 },
                 CurrentCategory = category,
-                
+
             };
             return View(model);
         }
-        public FileContentResult GetImage(int goodsId) {
+
+
+        public FileContentResult GetImage(int goodsId)
+        {
             Goods goods = repository.Goods.FirstOrDefault(g => g.GoodsId == goodsId);
             if (goods != null)
             {
                 return File(goods.ImageData, goods.ImageMimeTipe);
             }
-            else {
+            else
+            {
                 return null;
             }
         }

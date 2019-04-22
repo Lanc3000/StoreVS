@@ -1,0 +1,18 @@
+﻿@using Magazin.Web.Models
+@using Magazin.Web.HtmlHelpers;
+@model GoodsListViewModel
+
+@{
+    ViewBag.Title = "Товары";
+}
+<form method="get">
+    <div class="form-inline">
+        <label class="custom-control-label">Категория:</label>
+        @Html.DropDownList("category", Model.Category as SelectList,
+                htmlAttributes: new { @class = "form-control"})
+
+        
+        
+        <input type="submit" value="Фильтр" class="btn btn-default" />
+    </div>
+</form>

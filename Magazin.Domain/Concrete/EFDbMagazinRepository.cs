@@ -27,6 +27,7 @@ namespace Magazin.Domain.Concrete
                     dbEntry.Price = goods.Price;
                     dbEntry.Category = goods.Category;
                     dbEntry.Size = goods.Size;
+                    dbEntry.Producer = goods.Producer;
                     dbEntry.ImageData = goods.ImageData;
                     dbEntry.ImageMimeTipe = goods.ImageMimeTipe;
                 }

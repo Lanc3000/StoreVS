@@ -1,19 +1,35 @@
 ﻿@model IEnumerable<string>
 
-@Html.ActionLink("Домой", "List", "Goods", null,
-    new { @class = "btn btn-block btn-default btn-lg" })
 
-@foreach (var link in Model)
-{
-    @Html.RouteLink(link, new
-    {
-        controller = "Goods",
-        action = "List",
-        category = link,
-        page = 1
-    }, new
-    {
-        @class = "btn btn-block btn-default btn-lg"
-            + (link == ViewBag.SelectedCategory ? " btn-primary" : "")
-    })
-}
+
+<div class="dropdown">
+    <button class="btn btn-light dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Производитель
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="btn btn-light dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Возраст
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</div>
+<select class="custom-select">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+</select>
+<input class="form-control" name="price" id="out">
+<div id="slider-range"></div>
+
+<button type="button" class="btn  btnCatalog">Очистить</button>
+

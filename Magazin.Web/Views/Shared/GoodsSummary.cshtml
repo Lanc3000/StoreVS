@@ -1,29 +1,33 @@
 ﻿@model Magazin.Domain.Entities.Goods
 
 
-    <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card border-light">
-            <div class="card-img">
+<div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="card border-light">
+        <div class="card-img">
+            @if (Model.ImageData != null)
+            {
                 <img align="middle" src="@Url.Action("GetImage", "Goods",
-                new { Model.GoodsId })" class="img-fluid" alt="КАРТИНКА" />
-            </div>
-            <div class="card-body">
-                <h5 class="card-title txtCardCatalog">@Model.Name</h5>
-                <a href="#" class="btn btn-block btn-light btnGrey ">@Model.Price.ToString("# ₽")</a>
-                
-                    @using (Html.BeginForm("AddToCart", "Cart"))
-                    {
+                                            new { Model.GoodsId })" class="img-fluid" alt="КАРТИНКА" />
+            }
+        </div>
+        <div class="card-body">
+            <h5 class="card-title txtCardCatalog">@Model.Name</h5>
+            <a href="#" class="btn btn-block btn-light btnGrey ">@Model.Price.ToString("# ₽")</a>
+
+            @using (Html.BeginForm("AddToCart", "Cart"))
+            {
                 <div class="pull-right">
                     @Html.HiddenFor(x => x.GoodsId)
                     @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
                     <input type="submit" class="btn btn-block btn-primary btnBckg" value="В корзину" />
                 </div>
-                    }
-                
-                
-            </div>
+            }
+
+
         </div>
     </div>
+</div>
+
 
 
 

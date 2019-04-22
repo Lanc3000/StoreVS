@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
 
 namespace Magazin.Domain.Entities
@@ -10,7 +11,7 @@ namespace Magazin.Domain.Entities
      public class Goods
     {
 
-        [Display(Name = "ID")]
+        [HiddenInput(DisplayValue =false)]
         public int GoodsId { get; set; }
 
         [Display(Name = "Название")]
@@ -30,6 +31,9 @@ namespace Magazin.Domain.Entities
 
         [Display(Name = "Размер")]
         public int Size{ get; set; }
+
+        [Display(Name="Производитель")]
+        public string Producer { get; set; }
 
         [Display(Name = "Картинка")]
         public byte[] ImageData { get; set; }

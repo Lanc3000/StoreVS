@@ -57,12 +57,14 @@
 
         </div>
     </nav>
-    <header class="header d-flex justify-content-around align-items-center mb-3">
-        
+    <div class="bg_header">
+        <header class="header txtHeaderCatalog d-flex justify-content-around align-items-center mb-3">
+
             @Html.Action("MenuHorizontal", "Nav"),
             @Html.Action("Summary", "Cart")
-        
-    </header>
+
+        </header>
+    </div>
     <header class="col-md-6 col-xl-12 order-md-0 order-xl-1 mb-3">
         <div class="row">
             <div class="col-md-6 col-xl-6 d-flex justify-content-start">
@@ -93,7 +95,7 @@
     <div class="container d-flex">
         <div class="row  justify-content-between">
             <div id="categories" class="col-lg-3 col-md-4">
-                @Html.Action("Menu", "Nav")
+               @Html.Action("Menu", "Nav")
             </div>
             <div class="col-lg-9 col-md-8">
                 <div class="container">
@@ -102,9 +104,10 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
-    <footer class="footer d-flex  align-items-center">
+    <footer class="footer d-flex  align-items-center fixed-bottom">
         <div class="container">
 
             <div class="row ">
